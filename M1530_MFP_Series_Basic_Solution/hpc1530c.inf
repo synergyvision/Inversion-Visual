@@ -1,0 +1,659 @@
+;Hewlett-Packard LaserJet printer driver INF file
+;Copyright Hewlett-Packard 2010
+
+
+[Version]
+Signature="$Windows NT$"
+Provider=%HP% 
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318} 
+Class=Printer
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName=%HP_Mombi_Driver_Name% 
+CatalogFile=hpc1530c.cat
+DriverVer=09/23/2010,61.101.09.8561
+
+
+[MANUFACTURER]
+%HP%=HP,NTx86
+
+
+[HP]
+
+
+[HP.NTx86]
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,USBPRINT\Hewlett-PackardHP_La8B57,Hewlett-PackardHP_La8B57
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,USBPRINT\Hewlett-PackardHP_La8537,Hewlett-PackardHP_La8537
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,USBPRINT\Hewlett-PackardHP_La07D6,Hewlett-PackardHP_La07D6
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,USBPRINT\Hewlett-PackardHP_LaCB17,Hewlett-PackardHP_LaCB17
+
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,WSDPRINT\Hewlett-PackardHP_La8B57
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,WSDPRINT\Hewlett-PackardHP_La8537
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,WSDPRINT\Hewlett-PackardHP_La07D6
+"HP LaserJet M1530 MFP Series PCL 6" = hpc15306.gpd.NTx86,WSDPRINT\Hewlett-PackardHP_LaCB17
+
+
+[OEM URLS]
+%HP% = "http://go.microsoft.com/fwlink/?LinkID=37&prd=10798&sbp=Printers"
+
+
+[hpc15306.gpd.NTx86]
+CopyFiles=DATA_FILES,GPD_HYBRID_COMMON,HPPRPROC,UI,HYBRID_RENDER,DMC_x86,EAC,STRING_DLL,MANUAL_DUPLEX,RES_PCL6,PCLXL_GPD_P3,HELP,HP_UNIDRV,SERVICES,PNPDLL,PNPDLL_SYSCOPY,CAPI_32,LEDM,LEDM_SYSCOPY,QUERY_FOR_AUTODUPLEX,FXCOM_WRAPPER,VENDOR_SETUP,IMAGING
+DataFile=hpc15306.gpd
+DriverFile=unidrv.dll
+ConfigFile=hpmdp101.dll
+HelpFile=unidrv.hlp
+PrintProcessor=%PRINT_PROCESSOR% 
+AddReg=REGISTRY_SNP
+DelFiles=DEL9xFILE
+FeatureScore=0x20
+CopyInf=hpmldm01.inf
+
+
+[hpc15306.gpd.NTx86.CoInstallers]
+AddReg=CoLaunchInstall.AddReg
+CopyFiles=VENDOR_SETUP
+
+
+[CoLaunchInstall.AddReg]
+HKR,,CoInstallers32,0x10000,"hpbcoins32.dll,CoInstall"
+
+
+[VENDOR_SETUP]
+hpbcoins32.dll
+
+
+[InstallData]
+LaunchExe=Autorun.exe
+Params=/HWFirst
+PnPFinishEvent=hpc1530c
+InstallerRunningEvent=hpbcsiInstaller
+IOBackfill=LEDM,FAX
+
+
+[SourceInfo]
+SourceDirectory = %1%
+
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+
+
+[DEL9xFILE]
+hpzimn12.dll 
+
+
+[HPPRPROC]
+hpcpp101.dll,hpcpp101.dll,,0x00000020
+
+
+[UI]
+hpcui101.dll,hpcui101.dll,,0x00000020
+hpcpe101.dll,hpcpe101.dll,,0x00000020
+hpmdp101.dll,,0x00000020
+
+
+[PNPDLL]
+hpcpn101.dll,hpcpn101.dll,,0x00000020
+
+
+[PNPDLL_SYSCOPY]
+hpcpn101.dll,hpcpn101.dll,,0x00000020
+
+
+[HYBRID_RENDER]
+hpc3r101.dll,hpc3r101.dll,,0x00000020
+hpc6r101.dll,hpc6r101.dll,,0x00000020
+hpcbr101.dll,hpcbr101.dll,,0x00000020
+
+
+[GPD_HYBRID_COMMON]
+hpc6m101.gpd,hpc6m101.gpd,,0x00000020
+pclxl.gpd,pclxl.gpd,,0x00000020
+hpcsm101.gpd,hpcsm101.gpd,,0x00000020
+
+
+[STRING_DLL]
+hpcst101.dll,hpcst101.dll,,0x00000020
+hpcur101.dll,hpcur101.dll,,0x00000020
+hpmsn101.dll ,,0x00000020
+hpmsl101.dll,,0x00000020
+hpcsn101.dem,,,0x00000020
+hpcsat20.dll,,,0x00000020
+
+
+[DATA_FILES]
+hpcp1530.cfg,hpcp1530.cfg,,0x00000020
+hpc15306.xml,hpc15306.xml,,0x00000020
+hpcsc101.dtd,hpcsc101.dtd,,0x00000020
+hpc15306.gpd,hpc15306.gpd,,0x00000020
+hpc1530c.ini,hpc1530c.ini,,0x00000020
+hpcp6.hpx,hpcp6.hpx,,0x00000020
+
+
+[MANUAL_DUPLEX]
+hpcev101.dll,hpcev101.dll,,0x00000020
+
+
+[HELP]
+hpchl101.cab,hpchl101.cab,,0x00000020
+
+
+[SERVICES]
+hpcls101.dll,hpcls101.dll,,0x00000020
+hpcss101.dll,hpcss101.dll,,0x00000020
+
+
+[RES_PCL6]
+pclxl.dll,pclxl.dll,,0x00000020
+
+
+[PCLXL_GPD_P3]
+pjl.gpd,pjl.gpd,,0x00000020
+pclxl.gpd,pclxl.gpd,,0x00000020
+
+
+[CAPI_32]
+hpcc3101.dll,hpcc3101.dll,,0x00000020
+
+[EAC]
+cioum.dll,cioum.dll,,0x00000020
+cioum32.msi,cioum32.msi,,0x00000020
+
+
+[DMC_x86]
+hpcdmc32.dll,hpcdmc32.dll,,0x00000020
+hpbcfgre.dll,hpbcfgre.dll,,0x00000020
+
+
+[QUERY_FOR_AUTODUPLEX]
+hpleq101.dll,hpleq101.dll,,0x00000020
+hppccdvq32.dll,hppccdvq32.dll,,0x00000020
+
+
+[HP_UNIDRV]
+unidrv.dll,unidrv.dll,,0x00000020
+unires.dll,unires.dll,,0x00000020
+unidrvui.dll,unidrvui.dll,,0x00000020
+stdnames.gpd,stdnames.gpd,,0x00000020 
+stddtype.gdl,stddtype.gdl,,0x00000020
+stdschem.gdl,stdschem.gdl,,0x00000020
+stdschmx.gdl,stdschmx.gdl,,0x00000020
+unidrv.hlp,unidrv.hlp,,0x00000020
+
+
+[LEDM]
+hppccompio.dll,hppccompio.dll,,0x00000020
+
+
+[LEDM_SYSCOPY]
+hppccompio.dll,hppccompio.dll,,0x00000020
+
+
+[FXCOM_WRAPPER]
+hpfxcomw.dll,hpfxcomw.dll,,0x00000020
+
+
+[REGISTRY_SNP]
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"DemFileName",0x00000000,hpcsn101.dem
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"RealCfgDll",0x00000000,UNIDRVUI.dll
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"EnableIE7Launch",0x00010001,0
+HKLM,%HP_DRIVER_REG_PATH%\%HP_Mombi_Driver_Name%,"MystStdInstall",0x00010001,1 
+
+
+[IMAGING]
+hpfie101.dll,hpfie101.dll,,0x00000020
+
+
+[SourceDisksNames]
+98="HP LaserJet M1530 MFP Series PCL6 CD",hpc1530c.CAB,,
+97="HP LaserJet M1530 MFP Series PCL6 CD",%LocaleCABFile%,,
+96=%DiskID%,,,""
+
+
+[SourceDisksFiles]
+hpc15306.gpd=98
+hpc1530c.ini=98 
+hpcpp101.dll=98 
+hpcui101.dll=98
+hpcpe101.dll=98
+hpc6r101.dll=98
+hpcbr101.dll=98
+hpc3r101.dll=98
+pclxl.gpd=98
+hpcst101.dll=98 
+hpcur101.dll=98
+hpmdp101.dll=98
+hpcpn101.dll=98
+hpmsn101.dll =98
+hpmsl101.dll=98
+hpcsn101.dem=98
+hpcsat20.dll=98
+cioum32.msi=98
+cioum.dll=98
+hpcp6.hpx=98
+stddtype.gdl=98
+stdschem.gdl=98
+stdschmx.gdl=98
+hpcev101.dll=98
+hpcls101.dll=98
+hpcss101.dll=98
+hpcdmc32.dll=98
+hpbcfgre.dll=96
+hpcp1530.cfg=96
+hpc15306.xml=98
+hpcsc101.dtd=98
+stdnames.gpd=98 
+unidrv.dll=98
+unires.dll=98 
+unidrvui.dll=98 
+unidrv.hlp=97
+hpchl101.cab=98
+pclxl.dll=98
+pjl.gpd=98
+hpc6m101.gpd=98
+hpcsm101.gpd=98
+hpcc3101.dll=98
+hppccompio.dll=98
+hpfxcomw.dll=98
+hpleq101.dll=98
+hppccdvq32.dll=98
+hpbcoins32.dll=96
+hpfie101.dll=98
+
+
+[DestinationDirs]
+DefaultDestDir=66000
+HPPRPROC=66001 
+PNPDLL_SYSCOPY=66002
+LEDM_SYSCOPY=66002
+VENDOR_SETUP=66002 
+
+
+[Strings]      
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2enww.cab"
+
+
+[Strings.0401]      ; Arabic
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2arww.cab"
+
+
+[Strings.0403]      ; Catalan
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2caww.cab"
+
+
+[Strings.0404]      ; Chinese (Traditional)
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2zhtw.cab"
+
+
+[Strings.0804]      ; Chinese (Simplified)
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="P6i2zhcn.cab"
+
+
+[Strings.0405]       ; Czech
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2csww.cab"
+
+
+[Strings.0406]      ; Danish
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2daww.cab"
+
+
+[Strings.0413]        ;Dutch
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2nlww.cab"
+
+
+[Strings.0409]      ; English
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2enww.cab"
+
+
+[Strings.040B]        ;Finnish
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2fiww.cab"
+
+
+[Strings.040C]      ;French
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2frww.cab"
+
+
+[Strings.0407]      ;German
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2deww.cab"
+
+
+[Strings.0408]       ;Greek
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2elww.cab" 
+
+
+[Strings.040D]        ;Hebrew
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2heww.cab"
+
+
+[Strings.040E]       ;Hungerian 
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2huww.cab"
+
+
+[Strings.0410]       ;Italian
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2itww.cab"
+
+
+[Strings.0411]       ;Japanese
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2jaww.cab"
+
+
+[Strings.0412]        ;Korean
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2koww.cab"
+
+
+[Strings.0814]        ;Norwegian
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2noww.cab"
+
+
+[Strings.0415]        ;Polish
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2plww.cab"
+
+
+[Strings.0416]        ;Portugese
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2ptww.cab"
+
+
+[Strings.0419]        ;Russian
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2ruww.cab"
+
+
+[Strings.041B]        ;Slovak 
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2skww.cab"
+
+
+[Strings.040A]       ;Spanish
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2esww.cab"
+
+
+[Strings.041D]        ;Swedish
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2svww.cab"
+
+
+[Strings.041E]        ;Thai
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2thww.cab"
+
+
+[Strings.041F]        ;Turkish (Turkce)
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2trww.cab"
+
+
+[Strings.041A]        ;Croatian - Croatia
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2hrww.cab"
+
+
+[Strings.0402]        ;Bulgarian - Bulgaria
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2bgww.cab"
+
+
+[Strings.0425]        ;Estonian - Estonia
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2etww.cab"
+
+
+[Strings.0421]        ;Indonesian - Indonesia
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2idww.cab"
+
+
+[Strings.043F]        ;Kazakh - Kazakhstan
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2kkww.cab"
+
+
+[Strings.0427]        ;Lithuanian - Lithuania
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2ltww.cab"
+
+
+[Strings.0426]        ;Latvian - Latvia
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2lvww.cab"
+
+
+[Strings.0418]        ;Romanian - Romania
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2roww.cab"
+
+
+[Strings.081A]        ;Serbian (Latin) - Serbia
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2srww.cab"
+
+
+[Strings.0424]        ;Slovenian - Slovenia
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2slww.cab"
+
+
+[Strings.0422]        ;Ukrainian - Ukraine
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2ukww.cab"
+
+
+[Strings.042A]        ;Vietnamese - Vietnam
+PrinterClassName="Printers" 
+DiskID="HP LaserJet M1530 MFP Series PCL Printer Driver Disk"
+PRINT_PROCESSOR="hpcpp101,hpcpp101.dll" 
+HP="HP" 
+HP_DRIVER_REG_PATH="SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3"
+HP_Mombi_Driver_Name="HP LaserJet M1530 MFP Series PCL 6"
+LocaleCABFile ="p6i2viww.cab"

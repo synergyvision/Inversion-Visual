@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<BootstrapConfigXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BootstrapConfigXML.xsd">
+	<cfgData>
+		<CDorWeb>CD</CDorWeb>
+		<CSIConfigFile>Installer\InstallerConfig.xml</CSIConfigFile> 
+		<CSIInstallerExe>Installer\hpbcsiInstaller.exe</CSIInstallerExe>
+		<WindowsInstallerExe>Prerequisites\msi31\WindowsInstaller-KB893803-v2-x86.exe /norestart</WindowsInstallerExe>
+		<DotNetExe>Prerequisites\dotNetFramework\dotnetfx35setup.exe /norestart /lang:ENU</DotNetExe>
+		<MaxDiskSpaceRequired>231</MaxDiskSpaceRequired>
+		<DPInst32Dir>Installer\DPInst_x32</DPInst32Dir>
+		<DPInst64Dir>Installer\DPInst_x64</DPInst64Dir>
+		<LanguageDir>Languages</LanguageDir>
+  </cfgData>
+</BootstrapConfigXML>

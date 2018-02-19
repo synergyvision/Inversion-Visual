@@ -1,0 +1,5 @@
+[autorun] 
+open=Autorun.exe 
+icon=Autorun.exe,0
+label=HP Installer
+
